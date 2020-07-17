@@ -1,0 +1,31 @@
+.menu_wrapper {
+    bottom: 0;
+    height: 100%;
+    opacity: 0;
+    right: -1px;
+    top: 0;
+    width: 1px;
+    transition: all .25s ease-in-out;
+    z-index: 999;
+}
+
+.menu_wrapper.visible {
+    right: 0;
+    opacity: 1;
+    width: 100%;
+}
+
+.offcanvas_menu {
+    height: 100%;
+    opacity: .7;
+    right: -400px;
+    transition: all .55s ease-in-out;
+    top: 0;
+    z-index: 999;
+}
+
+.visible .offcanvas_menu {
+    opacity: 1;
+    right: 0px;
+}
+
