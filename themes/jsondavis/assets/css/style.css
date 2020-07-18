@@ -1,8 +1,8 @@
 @charset "UTF-8";
 :root{
-  --bg-color:#fff;
-  --secondary-bg-color:#eeeeee;
-  --heading-color: #5f5f5f;
+  --bg-color:#eee;
+  --secondary-bg-color:#ccc;
+  --heading-color: #111;
   --body-color: rgba(0, 0, 0, 0.7);
   --post-color: rgba(0, 0, 0, 0.44);
   --border-color: rgba(0, 0, 0, 0.15);
