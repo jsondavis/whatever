@@ -1,7 +1,9 @@
 backend:
-  name: test-repo
-  # name: git-gateway
+  # name: test-repo
   # branch: master # Branch to update (optional; defaults to master)
+  # name: git-gateway
+  name: github
+  repo: jsondavis/whatever
 
 publish_mode: editorial_workflow
 
