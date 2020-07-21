@@ -1,0 +1,18 @@
+.footer {
+    bottom: 0;
+    clear: both;
+    font-size: 10px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    a {
+        color: #a6a6a6;
+
+        &:hover {
+            color: var(--hover-color);
+        }
+    }
+}
