@@ -1,7 +1,7 @@
 ---
-title: Hipster World
-date: 2020-01-20T07:21:42.000Z
+title: Testing 123
 author: Alicia Davis
+date: '2020-07-04T10:21:42-04:00'
 categories:
   - Hipster
   - Letterpress
