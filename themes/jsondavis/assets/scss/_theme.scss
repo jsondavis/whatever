@@ -1,4 +1,9 @@
 :root{
+    --black:#000;
+    --near-black:#111;
+    --white:#fff;
+    --near-white:#eee;
+    --dark-gray:#666,
     --bg-color:#eee;
     --secondary-bg-color:#ccc;
     --tertiary-bg-color:#f4f4f4;
@@ -25,6 +30,14 @@ html[data-theme='dark'] {
     --pre-bg-color:rgb(33,33,45);
     --nav-text-color:rgb(191, 191, 191);
     --tag-color: rgb(191, 191, 191);
+}
+
+@function v($var, $fallback: null) {
+    @if($fallback) {
+        @return var(--#{$var}, #{$fallback});
+    } @else {
+        @return var(--#{$var});
+    }
 }
 
 

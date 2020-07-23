@@ -2,6 +2,7 @@
 @import 'theme';
 @import 'resets';
 @import 'breakpoints';
+@import 'animations';
 
 @import 'components/footer';
 @import 'components/page-top';
@@ -9,7 +10,6 @@
 @import 'components/post';
 @import 'components/sidebar';
 @import 'components/social-links';
-
 
 
 .category {
@@ -38,73 +38,20 @@
     margin-right: 5px;
 }
 
-/*basic styles ends*/
-/*animation starts*/
-
-.animated {
-    transition: top .8s linear;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    -ms-animation-duration: 1s;
-    -o-animation-duration: 1s;
-    animation-duration: 1s;
-}
-
-.animated.hinge {
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    -ms-animation-duration: 1s;
-    -o-animation-duration: 1s;
-    animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeInDown {
-    0% {
-        -webkit-transform: translateY(-20px);
-    }
-    100% {
-        -webkit-transform: translateY(0);
-    }
-}
-@-moz-keyframes fadeInDown {
-    0% {
-        -moz-transform: translateY(-20px);
-    }
-    100% {
-        -moz-transform: translateY(0);
-    }
-}
-@-o-keyframes fadeInDown {
-    0% {
-        -o-transform: translateY(-20px);
-    }
-    100% {
-        -o-transform: translateY(0);
-    }
-}
-@keyframes fadeInDown {
-    0% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    -moz-animation-name: fadeInDown;
-    -o-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-}
-
-/*animation ends*/
 .content {
     height: auto;
-    float: right;
-    width: 70%;
-    margin-top: 3rem;
+    margin-top: 420px;
     padding-top: 2rem;
+    position: absolute;
+    width: 100%;
+
+    @media screen and (min-width: $md) {
+        float: right;
+        margin-top: 3rem;
+        position: initial;
+        width: 70%;
+        z-index: 2;
+    }
 }
 
 .info {
@@ -181,10 +128,14 @@
     color: var(--hover-color);
 }
 
-/* share */
+// share
 .share {
+    display: grid;
     margin: 0px 30px;
-    display: inline-flex;
+
+    @media screen and (max-width: 960px) {
+        display: inline-flex;
+    }
 }
 
 .evernote {
@@ -193,76 +144,76 @@
     border-radius: 300px;
     background-color: #3e3e3e;
     margin-right: 5px;
-}
 
-.evernote a {
-    color: $white;
-    padding: 11px;
-    font-size: 12px;
-}
+    a {
+        color: $white;
+        padding: 11px;
+        font-size: 12px;
 
-.evernote a:hover {
-    color: var(--hover-color);
-    padding: 11px;
+        &:hover {
+            color: var(--hover-color);
+            padding: 11px;
+        }
+    }
 }
 
 .weibo {
     width: 32px;
     height: 32px;
     border-radius: 300px;
-    background-color: #ED6243;
+    background-color: #ed6243;
     margin-right: 5px;
-}
 
-.weibo a {
-    color: $white;
-    padding: 9px;
-}
+    a {
+        color: $white;
+        padding: 9px;
 
-.weibo a:hover {
-    color: #BD4226;
+        &:hover {
+            color: #bd4226;
+        }
+    }
 }
 
 .twitter {
     width: 32px;
     height: 32px;
     border-radius: 300px;
-    background-color: #59C0FD;
+    background-color: #59c0fd;
     margin-right: 5px;
+
+    a {
+        color: $white;
+        padding: 9px;
+
+        &:hover {
+            color: #4b9ece;
+        }
+    }
 }
 
-.twitter a {
-    color: $white;
-    padding: 9px;
-}
-
-.twitter a:hover {
-    color: #4B9ECE;
-}
-
-/* about */
+// about
 .about {
     margin: 30px;
+
+    h3 {
+        font-size: 22px;
+    }
 }
 
-.about h3 {
-    font-size: 22px;
-}
-
-/* links*/
+// links
 .links {
     margin: 30px;
+
+    h3 {
+        font-size: 22px;
+    }
+
+    a {
+        cursor: pointer;
+    }
 }
 
-.links h3 {
-    font-size: 22px;
-}
-
-.links a {
-    cursor: pointer;
-}
-
-/* Comments */
+// comments 
 .comment-count {
     color: #666;
 }
@@ -410,47 +361,6 @@ a.btn {
     padding-top: 50px;
 }
 
-@media screen and (max-width: 960px) {
-    .sidebar {
-        width: 100%;
-        position: absolute;
-        border-right: none;
-        z-index: 1;
-    }
-    .sidebar .logo-title {
-        padding-top: 120px;
-    }
-    .sidebar .logo-title .title img {
-        width: 100px;
-    }
-    .sidebar .logo-title .title h3 {
-        font-size: 20px;
-    }
-
-    .page-top {
-        width: 100%;
-    }
-
-    .post-title h3 {
-        line-height: 1.6;
-    }
-
-    .content {
-        margin-top: 420px;
-        width: 100%;
-        z-index: 2;
-        position: absolute;
-    }
-
-    .footer {
-        display: none;
-    }
-
-    .share {
-        display: grid;
-    }
-}
-
 
 /* Medium zoom */
 .medium-zoom-overlay {
@@ -474,13 +384,11 @@ a.btn {
 .medium-zoom-image {
     cursor: pointer;
     cursor: zoom-in;
-    /*
-    The `transition` is marked as "!important" for the animation to happen
-    even though it's overriden by another inline `transition` style attribute.
-    This is problematic with frameworks that generate inline styles on their
-    images (e.g. Gatsby).
-    See https://github.com/francoischalifour/medium-zoom/issues/110
-     */
+    // The `transition` is marked as "!important" for the animation to happen
+    // even though it's overriden by another inline `transition` style attribute.
+    // This is problematic with frameworks that generate inline styles on their
+    // images (e.g. Gatsby).
+    // See https://github.com/francoischalifour/medium-zoom/issues/110
     transition: transform 300ms cubic-bezier(0.2, 0, 0.2, 1) !important;
     z-index: 100;
 }

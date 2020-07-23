@@ -1,6 +1,7 @@
 .footer {
     bottom: 0;
     clear: both;
+    display: none;
     font-size: 10px;
     margin: 0 auto;
     padding-bottom: 20px;
@@ -12,7 +13,11 @@
         color: #a6a6a6;
 
         &:hover {
-            color: var(--hover-color);
+            color: v(hover-color);
         }
+    }
+
+    @media screen and (min-width: $md) {
+        display: block;
     }
 }

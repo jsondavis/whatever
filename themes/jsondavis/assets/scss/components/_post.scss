@@ -30,8 +30,8 @@
             color: var(--heading-color);
             font-size: 1.2rem;
             font-weight: 600;
-            line-height: 1;
             letter-spacing: 1px;
+            line-height: 1.6;
             margin: 1.5rem 0 .5rem;
             text-transform: uppercase;
             text-align: center;
@@ -69,6 +69,12 @@
                 }
             }
 
+        }
+
+        @media screen and (min-width: $md) {
+            h3 {
+                line-height: 1;
+            }
         }
     }
 
