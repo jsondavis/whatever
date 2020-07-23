@@ -4,7 +4,8 @@
     {{- hugo.Generator -}}
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="{{ .Site.Params.description }}">
-    {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+    {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css">
     {{- $css := "" -}}
     {{- range .Site.Params.customCss -}}

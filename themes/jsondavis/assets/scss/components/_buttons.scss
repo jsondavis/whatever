@@ -1,0 +1,85 @@
+.like-reblog-buttons {
+    float: right;
+}
+
+.like-button {
+    float: right;
+    padding: 0 0 0 10px;
+}
+
+.reblog-button {
+    float: right;
+    padding: 0;
+}
+
+#install-btn {
+    position: fixed;
+    bottom: 0px;
+    right: 6px;
+}
+
+.back-button {
+    padding-top: 30px;
+    max-width: 100px;
+    padding-left: 40px;
+    float: left;
+}
+
+
+.btn {
+    display: inline-block;
+    position: relative;
+    outline: 0;
+    color: var(--post-color);
+    background: transparent;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 999em;
+
+    a & {
+        color: #868686;
+        font-weight: 400;
+    }
+}
+
+.btn:hover {
+    display: inline-block;
+    position: relative;
+    outline: 0px;
+    color: #464545;
+    background: transparent;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #464545;
+    white-space: nowrap;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 999em;
+}
+
+[role="back"] {
+    padding: 0.5em 1.25em;
+    line-height: 1.666em;
+}
+
+[role="home"] {
+    padding: 0.5em 1.25em;
+    line-height: 1.666em;
+}
+
+[role="navigation"] {
+    padding: 0.5em 1.25em;
+    line-height: 1.666em;
+}
+
+[role="tags"] {
+    padding: 6px 12px;
+}
